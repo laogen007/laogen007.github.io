@@ -1,135 +1,169 @@
-/*https://github.com/chriskempson/tomorrow-theme*/
-.post-container pre,
-.post-container .highlight {
-    overflow: auto;
-    margin: 20px 0;
-    padding: 15px;
-    font-size: 13px;
-    color: #c5c8c6;
-    background: #1d1f21;
+.post-entry pre,
+.post-entry .highlight {
+  margin: 0;
+  background: #2d2d2d;
+  padding: 1rem;
+  border-style: solid;
+  border-width: 1px 0;
+  overflow: auto;
+  color: #ccc;
+  line-height: 1.3rem;
 }
-/*pre, code {
-  font-family: $code-font-family;
-}*/
-/*
-.post-container code {
-  padding: 2px 4px;
-  word-break: break-all;
-  color: $code-foreground;
-  background: $code-background;
-  border-radius: $code-border-radius;
-  font-size $code-font-size;
-}*/
-.post-container pre code {
-    padding: 0;
-    color: #c5c8c6;
-    background: none;
-    text-shadow: none;
+.post-entry .highlight .gutter pre,
+.post-entry .gist .gist-file .gist-data .line-numbers {
+  color: #666;
+  font-size: 1em;
 }
-.post-container .highlight pre {
-    border: none;
-    margin: 0;
-    padding: 1px;
+.post-entry pre,
+.post-entry code {
+  font-size: 0.8rem;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
 }
-.post-container .highlight table {
-    margin: 0;
-    width: auto;
-    border: none;
+.post-entry code {
+  margin: 0 0.5rem;
+  color: #ff502c;
+  background: #fff5f5;
+  padding: 0 0.3em;
+  border-radius: 3px;
+  border: 1px solid #eee;
+  font-size: 0.9rem;
 }
-.post-container .highlight td {
-    border: none !important;
-    padding: 0;
+.post-entry pre code {
+  background: none;
+  text-shadow: none;
+  padding: 0;
 }
-.post-container .highlight figcaption {
-    zoom: 1;
-    font-size: 1em;
-    color: #c5c8c6;
-    line-height: 1em;
-    margin-bottom: 1em;
+.post-entry .highlight pre {
+  border: none;
+  margin: 0;
+  padding: 0;
 }
-.post-container .highlight figcaption:before,
-.post-container .highlight figcaption:after {
-    content: "";
-    display: table;
+.post-entry .highlight table {
+  margin: 0;
+  width: auto;
 }
-.post-container .highlight figcaption:after {
-    clear: both;
+.post-entry .highlight td {
+  border: none;
+  padding: 0;
 }
-.post-container .highlight figcaption a {
-    float: right;
-    color: #c5c8c6;
+.post-entry .highlight figcaption {
+  font-size: 0.9em;
+  color: #999;
+  line-height: 2em;
+  margin-bottom: 1em;
 }
-.post-container .highlight figcaption a:hover {
-    border-bottom-color: #c5c8c6;
+.post-entry .highlight figcaption a {
+  float: right;
 }
-.post-container .highlight .gutter pre {
-    color: #666;
-    text-align: right;
-    padding-right: 20px;
+.post-entry .highlight .gutter pre {
+  text-align: left;
+  padding: 0 10px;
 }
-.post-container .highlight .line {
-    height: 20px;
+.post-entry .highlight .line {
+  height: 1rem;
 }
-.post-container .gist table {
-    width: auto;
+.post-entry .highlight .line.marked {
+  background: #515151;
 }
-.post-container .gist table td {
-    border: none;
+.post-entry .gist {
+  margin: 0 -20px;
+  border-style: solid;
+  border-color: color-border;
+  border-width: 1px 0;
+  background: #2d2d2d;
+  padding: 15px 20px 15px 0;
 }
-.post-container pre .comment {
-    color: #969896;
+.post-entry .gist .gist-file {
+  border: none;
+  font-family: Consolas, Monaco, Menlo, Consolas, monospace;
+  margin: 0;
 }
-.post-container pre .variable,
-.post-container pre .attribute,
-.post-container pre .tag,
-.post-container pre .regexp,
-.post-container pre .ruby .constant,
-.post-container pre .xml .tag .title,
-.post-container pre .xml .pi,
-.post-container pre .xml .doctype,
-.post-container pre .html .doctype,
-.post-container pre .css .id,
-.post-container pre .css .class,
-.post-container pre .css .pseudo {
-    color: #c66;
+.post-entry .gist .gist-file .gist-data {
+  background: none;
+  border: none;
 }
-.post-container pre .number,
-.post-container pre .preprocessor,
-.post-container pre .built_in,
-.post-container pre .literal,
-.post-container pre .params,
-.post-container pre .constant,
-.post-container pre .command {
-    color: #de935f;
+.post-entry .gist .gist-file .gist-data .line-numbers {
+  background: none;
+  border: none;
+  padding: 0 20px 0 0;
 }
-.post-container pre .ruby .class .title,
-.post-container pre .css .rules .attribute,
-.post-container pre .string,
-.post-container pre .value,
-.post-container pre .inheritance,
-.post-container pre .header,
-.post-container pre .ruby .symbol,
-.post-container pre .xml .cdata,
-.post-container pre .special,
-.post-container pre .number,
-.post-container pre .formula {
-    color: #b5bd68;
+.post-entry .gist .gist-file .gist-data .line-data {
+  padding: 0 !important;
 }
-.post-container pre .title,
-.post-container pre .css .hexcolor {
-    color: #8abeb7;
+.post-entry .gist .gist-file .highlight {
+  margin: 0;
+  padding: 0;
+  border: none;
 }
-.post-container pre .function,
-.post-container pre .python .decorator,
-.post-container pre .python .title,
-.post-container pre .ruby .function .title,
-.post-container pre .ruby .title .keyword,
-.post-container pre .perl .sub,
-.post-container pre .javascript .title,
-.post-container pre .coffeescript .title {
-    color: #81a2be;
+.post-entry .gist .gist-file .gist-meta {
+  background: #2d2d2d;
+  color: #999;
+  font: 0.85em font-sans;
+  text-shadow: 0 0;
+  padding: 0;
+  margin-top: 1em;
+  margin-left: 20px;
 }
-.post-container pre .keyword,
-.post-container pre .javascript .function {
-    color: #b294bb;
+.post-entry .gist .gist-file .gist-meta a {
+  color: color-link;
+  font-weight: normal;
+}
+.post-entry .gist .gist-file .gist-meta a:hover {
+  text-decoration: underline;
+}
+pre .comment,
+pre .title {
+  color: #999;
+}
+pre .variable,
+pre .attribute,
+pre .tag,
+pre .regexp,
+pre .ruby .constant,
+pre .xml .tag .title,
+pre .xml .pi,
+pre .xml .doctype,
+pre .html .doctype,
+pre .css .id,
+pre .css .class,
+pre .css .pseudo {
+  color: #f2777a;
+}
+pre .number,
+pre .preprocessor,
+pre .built_in,
+pre .literal,
+pre .params,
+pre .constant {
+  color: #f99157;
+}
+pre .class,
+pre .ruby .class .title,
+pre .css .rules .attribute {
+  color: #9c9;
+}
+pre .string,
+pre .value,
+pre .inheritance,
+pre .header,
+pre .ruby .symbol,
+pre .xml .cdata {
+  color: #9c9;
+}
+pre .css .hexcolor {
+  color: #6cc;
+}
+pre .function,
+pre .python .decorator,
+pre .python .title,
+pre .ruby .function .title,
+pre .ruby .title .keyword,
+pre .perl .sub,
+pre .javascript .title,
+pre .coffeescript .title {
+  color: #69c;
+}
+pre .keyword,
+pre .javascript .function {
+  color: #c9c;
 }
